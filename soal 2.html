@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>
+            soal 2
+        </title>
+    </head>
+    <body>
+        <form>
+            username: <input id="idTxt"><br>
+            password: <input id="passTxt" type="password"><br>
+        </form>
+        
+        <button onclick="Login(idTxt.value,passTxt.value)"> Login </button>
+        <p id="outputText"><</p>
+
+        <script>
+            var id_user = "eksan";
+            var pass_user = "papanggo";
+
+            function Login(id,pass) {
+                if(id == id_user && pass == pass_user){
+                    document.getElementById("outputText").innerHTML = "True";
+                }else{
+                    document.getElementById("outputText").innerHTML = "False";
+                }
+
+            }
+            function login(n,m) {
+                if(m<=1){ 
+                    document.getElementById("outputText").innerHTML +=n;
+                    return n;
+                }else{
+                    document.getElementById("outputText").innerHTML +=n + " + ";
+                    return n + Kali(n,m-1);
+                }
+            }
+        </script>
+    </body>
+</html>
